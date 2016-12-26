@@ -1,0 +1,5 @@
+cd ..
+mkdir python
+cd python/
+touch python_cousera
+exit

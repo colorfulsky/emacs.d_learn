@@ -1,0 +1,26 @@
+
+;; ----- smex-history -----
+(
+ find-file
+ customize-group
+ run-js
+ package-list-packages
+ recentf-mode
+ package-delete
+ package-install
+)
+
+;; ----- smex-data -----
+(
+ (eval-buffer . 3)
+ (company-mode . 2)
+ (customize-group . 6)
+ (smartparens-mode . 1)
+ (replace-string . 1)
+ (package-install . 1)
+ (package-list-packages . 2)
+ (package-delete . 3)
+ (run-js . 6)
+ (recentf-mode . 2)
+ (find-file . 1)
+)
