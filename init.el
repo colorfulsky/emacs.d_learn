@@ -33,7 +33,8 @@
 			  ;;nodejs-repl
 ;;			  js-comint
 			  ;;			  exec-path-from-shell
-;;			  elpy
+			  ;;			  elpy
+			  popwin
                           ) "Default packages")
 
 (setq dong/packages-installed-p 'dong/packages)
@@ -81,7 +82,7 @@
  '(custom-safe-themes
    (quote
     ("c924950f6b5b92a064c5ad7063bb34fd3facead47cd0d761a31e7e76252996f7" default)))
- '(package-selected-packages (quote (helm hungry-delete monokai-theme company))))
+ '(package-selected-packages (quote (popwin helm hungry-delete monokai-theme company))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -180,3 +181,6 @@
 (global-auto-revert-mode t)
 
 
+;; set popwin
+(require 'popwin)
+(popwin-mode t)
