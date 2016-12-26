@@ -96,6 +96,7 @@
 ;;disable backup file
 (setq make-backup-files nil)
 ;;(setq auto-save-default nil)
+;;(setq auto-save-default t)
 
 ;;active recentf mode
   (require 'recentf)
