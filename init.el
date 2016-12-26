@@ -95,6 +95,7 @@
 
 ;;disable backup file
 (setq make-backup-files nil)
+;;(setq auto-save-default nil)
 
 ;;active recentf mode
   (require 'recentf)
@@ -172,3 +173,9 @@
 	(pop-to-buffer (make-comint "node-repl" "node" nil "--interactive")))
 
 ;;(node-repl)
+;;
+
+;;set auto-revert-mode
+(global-auto-revert-mode t)
+
+
