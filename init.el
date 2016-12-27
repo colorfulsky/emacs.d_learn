@@ -184,3 +184,11 @@
 ;; set popwin
 (require 'popwin)
 (popwin-mode t)
+
+;;set abbrev mode ;make variables a alias
+(abbrev-mode t)
+(define-abbrev-table 'global-abbrev-table '(
+					    ("dong" "Hello Here dong is!")
+					    ))
+;;It's very intersting,Hello Here dong is! 
+
