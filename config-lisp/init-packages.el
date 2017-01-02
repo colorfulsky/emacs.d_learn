@@ -75,5 +75,26 @@
 (require 'popwin)
 (popwin-mode t)
 
+;;setting mit-scheme-----------------
+(global-font-lock-mode 1)    
+;;; Also highlight parens    
+(setq show-paren-delay 0    
+      show-paren-style 'parenthesis)    
+(show-paren-mode 1)    
+;;(setenv "MITSCHEME_LIBRARY_PATH" "C:/Program Files (x86)/MIT-GNU Scheme/lib")
+;;; This is the binary name of my scheme implementation    
+(setq scheme-program-name "mit-scheme")    
+
+(setq exec-path (append exec-path '("C:/Program Files (x86)/MIT-GNU Scheme/bin")))
+
+
+;;-----------------------
+;;use native code to enable nodejs repl
+ (defun node-repl () (interactive)
+	(pop-to-buffer (make-comint "node-repl" "node" nil "--interactive")))
+
+;;(node-repl)
+
+
 ;;Always to  be the last one
 (provide 'init-packages)
