@@ -1,56 +1,13 @@
-
-;;- turn off tool-bar
-;;- turn off scroll-bar
-;;- show linum-mode
-;;- turn off splash screen
-;;- save your config
-;;- define a function to quickly open your config file.
-
 ;; Added by Package.el.  This must come before configurations of
 ;; installed packages.  Don't delete this line.  If you don't want it,
 ;; just comment it out by adding a semicolon to the start of the line.
 ;; You may delete these explanatory comments.
-;;(package-initialize)
+(package-initialize)
+(add-to-list 'load-path "~/.emacs.d/config-lisp")
+(require 'init-packages)
 
-;;Enforce your package manage system.
-  (when (>= emacs-major-version 24)
-    (require 'package)
-    (package-initialize)
-    (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/") t)
-    )
-  (require 'cl)
+(setq ring-bell-function 'ignore)
 
-  ;;add package you want here
-  (defvar dong/packages '(
-                          company
-			  monokai-theme
-			  hungry-delete
-;;			  smex
-			  swiper
-			  counsel
-			  smartparens
-			  js2-mode
-			  ;;nodejs-repl
-;;			  js-comint
-			  ;;			  exec-path-from-shell
-			  ;;			  elpy
-			  popwin
-                          ) "Default packages")
-
-(setq dong/packages-installed-p 'dong/packages)
-
-  (defun dong/packages-installed-p ()
-    (loop for pkg in dong/packages
-          when (not (package-installed-p pkg)) do (return nil)
-          finally (return t)))
-
-  (unless (dong/packages-installed-p)
-    (message "%s" "Refreshing package database...")
-    (package-refresh-contents)
-    (dolist (pkg dong/packages)
-      (when (not (package-installed-p pkg))
-        (package-install pkg))))
-;;------------------------------------------------------------------
 
 (tool-bar-mode 0)
 (scroll-bar-mode 0)
@@ -66,13 +23,6 @@
 
 ;;(recentf-mode t)
 
-;;Melpa
-;;more package
-(setq package-archives
-      '(;;("gnu" . "http://elpa.gnu.org/packages/")
-;;    ("melpa-stable" . "http://stable.melpa.org/packages/")
-	;; ("melpa" . "https://melpa.org/packages/")
-	 ("pokit" . "http://elpa.popkit.org/packages/")))
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -119,13 +69,7 @@
 
 ;;----------------------------------------------------
 
-(global-company-mode t)
 
-;;load theme
-(load-theme 'monokai t)
-
-(require 'hungry-delete)
-(global-hungry-delete-mode t)
 
 
 ;;set smex
@@ -133,30 +77,18 @@
 ;;(smex-initialize)
 ;;(global-set-key (kbd "M-x") 'smex)
 
-;;set swiper as well as counsel
-(ivy-mode 1)
-(setq ivy-use-virtual-buffers t)
 (global-set-key "\C-s" 'swiper)
 (global-set-key (kbd "C-c C-r") 'ivy-resume)
 (global-set-key (kbd "<f6>") 'ivy-resume)
 (global-set-key (kbd "M-x") 'counsel-M-x)
 (global-set-key (kbd "C-x C-f") 'counsel-find-file)
 
-;;configure smartparens
-(require 'smartparens-config)
-;;(add-hook 'emacs-lisp-mode-hook 'smartparens-mode-hook)
-(smartparens-global-mode t)
 
 
 ;;config undo quickly key
 (global-set-key (kbd "C-/") 'undo)
 
 
-;;config javascript in js2-mode
-(setq auto-mode-alist
-      (append
-       '(("\\.js\\'" . js2-mode))
-       auto-mode-alist))
 
 ;;config nodejs repl
 ;;(require 'nodejs-repl)
@@ -181,9 +113,6 @@
 (global-auto-revert-mode t)
 
 
-;; set popwin
-(require 'popwin)
-(popwin-mode t)
 
 ;;set abbrev mode ;make variables a alias
 (abbrev-mode t)
@@ -191,4 +120,18 @@
 					    ("dong" "Hello Here dong is!")
 					    ))
 ;;It's very intersting,Hello Here dong is! 
+
+;;(find-file "~/.emacs.d/init-packages.el")
+
+;;setting mit-scheme-----------------
+(global-font-lock-mode 1)    
+;;; Also highlight parens    
+(setq show-paren-delay 0    
+      show-paren-style 'parenthesis)    
+(show-paren-mode 1)    
+;;(setenv "MITSCHEME_LIBRARY_PATH" "C:/Program Files (x86)/MIT-GNU Scheme/lib")
+;;; This is the binary name of my scheme implementation    
+(setq scheme-program-name "mit-scheme")    
+;;-----------------------
+(setq exec-path (append exec-path '("C:/Program Files (x86)/MIT-GNU Scheme/bin")))
 
