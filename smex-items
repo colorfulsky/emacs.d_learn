@@ -1,26 +1,57 @@
 
 ;; ----- smex-history -----
 (
- find-file
- customize-group
- run-js
- package-list-packages
- recentf-mode
+ load-theme
  package-delete
- package-install
+ package-list-packages
+ anaconda-mode
+ org-babel-tangle
+ company-anaconda
+ company-ispell
 )
 
 ;; ----- smex-data -----
 (
  (eval-buffer . 3)
  (company-mode . 2)
- (customize-group . 6)
+ (customize-group . 11)
  (smartparens-mode . 1)
  (replace-string . 1)
- (package-install . 1)
- (package-list-packages . 2)
- (package-delete . 3)
+ (package-install . 5)
+ (package-list-packages . 9)
+ (package-delete . 5)
  (run-js . 6)
  (recentf-mode . 2)
- (find-file . 1)
+ (find-file . 3)
+ (helm-find-files . 7)
+ (eshell . 1)
+ (revert-buffer-with-coding-system . 4)
+ (run-scheme . 9)
+ (counsel-git . 3)
+ (abbrev-mode . 2)
+ (message-mode . 2)
+ (test-autoload . 1)
+ (rename-file . 5)
+ (rename-buffer . 4)
+ (delete-file . 1)
+ (recover-file . 1)
+ (ibuffer . 1)
+ (counsel-git-grep . 1)
+ (load-theme . 14)
+ (color-theme-sanityinc-solarized-dark . 4)
+ (customize-group-other-window . 1)
+ (byte-recompile-file . 1)
+ (iedit-mode . 4)
+ (er/expand-region . 2)
+ (color-theme-sanityinc-solarized-light . 2)
+ (org-pomodoro . 2)
+ (info . 3)
+ (org-table-create-or-convert-from-region . 1)
+ (read-only-mode . 1)
+ (helm-ag . 1)
+ (helm-do-ag-project-root . 1)
+ (company-ispell . 2)
+ (company-anaconda . 1)
+ (org-babel-tangle . 1)
+ (anaconda-mode . 1)
 )
