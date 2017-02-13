@@ -5,3 +5,8 @@ popwin/
 recentf
 eshell/
 smex-items
+# Compiled
+*.elc
+
+# Packaging
+.cask
