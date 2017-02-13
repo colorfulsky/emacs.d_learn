@@ -1,13 +1,13 @@
 
 ;; ----- smex-history -----
 (
+ anaconda-eldoc-mode
  load-theme
- package-delete
  package-list-packages
+ package-install
+ 2048-game
+ package-delete
  anaconda-mode
- org-babel-tangle
- company-anaconda
- company-ispell
 )
 
 ;; ----- smex-data -----
@@ -17,8 +17,8 @@
  (customize-group . 11)
  (smartparens-mode . 1)
  (replace-string . 1)
- (package-install . 5)
- (package-list-packages . 9)
+ (package-install . 6)
+ (package-list-packages . 10)
  (package-delete . 5)
  (run-js . 6)
  (recentf-mode . 2)
@@ -37,7 +37,7 @@
  (recover-file . 1)
  (ibuffer . 1)
  (counsel-git-grep . 1)
- (load-theme . 14)
+ (load-theme . 18)
  (color-theme-sanityinc-solarized-dark . 4)
  (customize-group-other-window . 1)
  (byte-recompile-file . 1)
@@ -54,4 +54,6 @@
  (company-anaconda . 1)
  (org-babel-tangle . 1)
  (anaconda-mode . 1)
+ (2048-game . 1)
+ (anaconda-eldoc-mode . 1)
 )

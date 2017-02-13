@@ -32,7 +32,7 @@
     ("c:/Users/dong/Dropbox/emacs_learn_21days/day6.org" "c:/Users/dong/Dropbox/emacs_file/会议记录.org" "c:/Users/dong/Dropbox/emacs_file/尽管去做读书札记.org")))
  '(package-selected-packages
    (quote
-    (2048-game color-theme color-theme-solarized ob-ipython popwin helm hungry-delete monokai-theme company)))
+    (pallet 2048-game color-theme color-theme-solarized ob-ipython popwin helm hungry-delete monokai-theme company)))
  '(popwin:popup-window-position (quote bottom))
  '(popwin:popup-window-width 90)
  '(pos-tip-background-color "#A6E22E")
